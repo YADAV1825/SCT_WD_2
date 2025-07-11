@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shiny Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="stopwatch-container">
+    <div class="watch-body">
+      <div class="dial">
+        <div id="hand" class="hand"></div>
+        <div class="center-dot"></div>
+
+        <div class="markers">
+          <!-- 12 dots (hour markers) -->
+          <div class="dot" style="--i: 0;"></div>
+          <div class="dot" style="--i: 1;"></div>
+          <div class="dot" style="--i: 2;"></div>
+          <div class="dot" style="--i: 3;"></div>
+          <div class="dot" style="--i: 4;"></div>
+          <div class="dot" style="--i: 5;"></div>
+          <div class="dot" style="--i: 6;"></div>
+          <div class="dot" style="--i: 7;"></div>
+          <div class="dot" style="--i: 8;"></div>
+          <div class="dot" style="--i: 9;"></div>
+          <div class="dot" style="--i: 10;"></div>
+          <div class="dot" style="--i: 11;"></div>
+        </div>
+        
+        <div class="shine"></div>
+      </div>
+    </div>
+    
+    <div class="time-display" id="display">00:00:00</div>
+    
+    <div class="controls">
+      <button onclick="startStop()">Start</button>
+      <button onclick="pause()">Pause</button>
+      <button onclick="reset()">Reset</button>
+      <button onclick="lap()">Lap</button>
+    </div>
+    
+    <ul id="laps" class="laps"></ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
